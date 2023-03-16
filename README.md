@@ -1,11 +1,11 @@
-About pyvbmc
-============
+About pyvbmc-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyvbmc-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pypi.org/project/PyVBMC/
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyvbmc-feedstock/blob/main/LICENSE.txt)
 
 Summary: Variational Bayesian Monte Carlo in Python.
 
