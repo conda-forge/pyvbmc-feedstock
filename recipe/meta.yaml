@@ -1,5 +1,5 @@
 {% set name = "pyvbmc" %}
-{% set version = "1.0.1" %}
+{% set version = "1.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/PyVBMC-{{ version }}.tar.gz
-  sha256: cb50a06b06e4ae68a1c337cc9b39b942a75fc9d229d9642deee17d9069a4f780
+  sha256: 32d7b6ac68ccea066f0682e7a27bcce9ffbfd4160af7496e3ece5714977a9b10
 
 build:
   noarch: python
