@@ -149,4 +149,5 @@ Feedstock Maintainers
 
 * [@Bobby-Huggins](https://github.com/Bobby-Huggins/)
 * [@lacerbi](https://github.com/lacerbi/)
+* [@pipme](https://github.com/pipme/)
 
