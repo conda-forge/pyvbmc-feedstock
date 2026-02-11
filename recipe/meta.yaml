@@ -1,18 +1,18 @@
 {% set name = "pyvbmc" %}
-{% set version = "1.0.2" %}
+{% set version = "1.0.4" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/PyVBMC-{{ version }}.tar.gz
-  sha256: 32d7b6ac68ccea066f0682e7a27bcce9ffbfd4160af7496e3ece5714977a9b10
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 42fadb964d94e566ab5e545670064b49fd33285fbfa236e7a70a2e43c8691750
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
