@@ -11,16 +11,17 @@ Summary: Variational Bayesian Monte Carlo in Python.
 
 Development: https://github.com/acerbilab/pyvbmc/
 
-Documentation: https://acerbilab.github.io/pyvbmc/
+Documentation: https://acerbilab.org/pyvbmc/
 
 Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=18277&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pyvbmc-feedstock?branchName=main">
+      <a href="https://github.com/conda-forge/pyvbmc-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/pyvbmc-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
       </a>
     </td>
   </tr>
@@ -43,31 +44,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `pyvbmc` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install pyvbmc
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install pyvbmc
 ```
 
-It is possible to list all of the versions of `pyvbmc` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add pyvbmc
+# for installing globally
+pixi global install pyvbmc
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `pyvbmc` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search pyvbmc --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search pyvbmc --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search pyvbmc --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -79,6 +122,8 @@ mamba repoquery whoneeds pyvbmc --channel conda-forge
 # List dependencies of `pyvbmc`:
 mamba repoquery depends pyvbmc --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
