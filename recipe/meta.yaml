@@ -1,5 +1,5 @@
 {% set name = "pyvbmc" %}
-{% set version = "1.0.4" %}
+{% set version = "1.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 42fadb964d94e566ab5e545670064b49fd33285fbfa236e7a70a2e43c8691750
+  sha256: 4df52f82b733c8637446bc87beee1115ba32e96cf0915ba67d95e18637c31191
 
 build:
   noarch: python
@@ -17,22 +17,22 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - setuptools-scm
+    - setuptools >=61
+    - setuptools-scm >=6.2
     - pip
   run:
     - python >={{ python_min }}
-    - cma >=3.1.0
+    - cma >=3.4.0
     - corner >=2.2.1
     - dill >=0.3.5.1
-    - gpyreg >=0.1.0
+    - filelock >=3.12.1
+    - gpyreg >=1.4.0
     - imageio >=2.13.5
-    - matplotlib-base >=3.5.1
-    - numpy >=1.22.1
-    - plotly >=5.11.0
-    - pytest >=6.2.5
-    - pytest-mock >=3.6.1
-    - pytest-rerunfailures >=10.2
-    - scipy >=1.7.3
+    - matplotlib-base >=3.9.0
+    - numpy >=2.0.0
+    - platformdirs >=3.0.0
+    - scipy >=1.15.0
+    - threadpoolctl >=3.2.0
 
 test:
   imports:
@@ -45,11 +45,13 @@ test:
 
 about:
   home: https://pypi.org/project/PyVBMC/
-  doc_url: https://acerbilab.github.io/pyvbmc/
+  doc_url: https://acerbilab.org/pyvbmc/
   dev_url: https://github.com/acerbilab/pyvbmc/
   summary: Variational Bayesian Monte Carlo in Python.
   license: BSD-3-Clause
-  license_file: LICENSE
+  license_file:
+    - LICENSE
+    - pyvbmc/svbmc/LICENSE.txt
 
 extra:
   recipe-maintainers:
